@@ -16,7 +16,14 @@ console.log("welcome!");
         var url = checkTarget(target);
         console.log("Chosen URL:",url);
         rl.close();
-        runApi(url);
+        // runApi(url);
+        axiosRequest.get(url)
+            .then(response => {
+                console.log("response:",response.data.activity)
+            })
+            .catch(error => {
+                console.log("error:",error)
+            });
     }catch(e){
         console.error("error while prompting",e)
     }
