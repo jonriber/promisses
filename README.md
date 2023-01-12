@@ -8,3 +8,7 @@ node then_catch.js<br/>
 in your console, use:<br/>
 node async_await.js<br/>
 
+### dev notes:
+<br/>
+
+I am also remembering how to structure simple prompt interfaces while asking user for input, so he would move on to the next part.
