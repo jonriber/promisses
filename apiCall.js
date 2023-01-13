@@ -1,12 +1,15 @@
-const axiosRequest = require("axios");
+// const axiosRequest = require("axios");
+import axiosRequest from "axios"
 
 const apiCall = (method,url,) => {
-    if(method === 1){
+    console.log("INPUTS:",method,url)
+    if(method == 1){
         //async and await method
         //need to call an async method
-       getActivity(url).then(data => console.log("data:",data));
-    }else if(method === 2){
+       getActivity(url).then(data => console.log("data:",data.activity));
+    }else if(method == 2){
         //then and catch method
+    console.log("METHODO 2");
     axiosRequest.get(url)
         .then(response => {
             console.log("response:",response.data.activity)
@@ -27,4 +30,5 @@ async function getActivity(url){
     }   
 };
 
+// exports.apiCall = apiCall;
 export default apiCall;
